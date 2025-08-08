@@ -1,0 +1,15 @@
+body{
+    background-color: var(--bg-color);
+    font: var(--text);
+    color: var(--text-color-primary);
+}
+
+h1, h2, h3{
+    font: inherit;
+}
+a{
+    color: var(--text);
+}
+a:hover{
+    color: var(--brand-color-light);
+}
