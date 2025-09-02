@@ -18,12 +18,53 @@ a:hover{
     padding-inline: 32px;
     margin-inline: auto;
 }
-/* 
------>> Utility-first <<-----
-*/
-.grid{
-    display: grid;
+main{
+    margin-top: 40px;
 }
-.grid-flow-col{
-    grid-auto-flow: column;
+img{
+    max-width: 100%;
+}
+
+.content-tag{
+    background-color: var(--brand-color-dark);
+    display: inline-block;
+    border-radius: 4px;
+    padding:4px 8px;
+    font: 500 10px/1.2 var(--font-family);
+    letter-spacing: 0.04em;
+    box-shadow: 0px 4px 16px rgba(2,6,23,0.251);
+    text-transform: uppercase;
+}
+/* -------------------------------------------------- */
+#featured{
+    img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+    .card{
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+
+        &::before{
+            content: "";
+            inset: 0;
+            top: 50%;
+            position: absolute;
+            background: linear-gradient(180deg, transparent 0%, #020617 100%);
+        }
+
+        figcaption{
+            position: absolute;
+            bottom: 0;
+            padding: 24px;
+            &:has(.text-lg){
+                padding: 12px;
+            }
+            h2{
+                margin-top: 8px;
+            }
+        }
+    }   
 }
